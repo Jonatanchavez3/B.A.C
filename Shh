@@ -8,7 +8,7 @@ local TextLabel_1 = Instance.new("TextLabel")
 local Hidedframe = Instance.new("Frame")
 local HidedOnoff = Instance.new("TextLabel")
 
-ScreenGui.Parent = game.Workspace
+ScreenGui.Parent = game.CoreGui
 
 MainFrame.Name = "MainFrame"
 MainFrame.Parent = ScreenGui
@@ -97,7 +97,7 @@ HidedOnoff.Text = "N/A"
 HidedOnoff.TextColor3 = Color3.new(0, 0, 0)
 HidedOnoff.TextSize = 14
 
-local function SKZOEC_fake_script()
+local function WWZKPG_fake_script() 
 	local script = Instance.new('LocalScript', TextLabel_3)
 
 	function zigzag(X) return math.acos(math.cos(X*math.pi))/math.pi end
@@ -110,8 +110,8 @@ local function SKZOEC_fake_script()
 	
 	
 end
-coroutine.wrap(SKZOEC_fake_script)()
-local function PHKTAQP_fake_script() 
+coroutine.wrap(WWZKPG_fake_script)()
+local function UXEJN_fake_script()
 	local script = Instance.new('LocalScript', MainFrame)
 
 	function zigzag(X) return math.acos(math.cos(X*math.pi))/math.pi end
@@ -125,8 +125,8 @@ local function PHKTAQP_fake_script()
 	script.Parent.Active = true
 	script.Parent.Draggable = true
 end
-coroutine.wrap(PHKTAQP_fake_script)()
-local function SXQBB_fake_script()
+coroutine.wrap(UXEJN_fake_script)()
+local function PDSHCI_fake_script()
 	local script = Instance.new('LocalScript', MainFrame)
 
 	script.Parent.Active = true
@@ -134,8 +134,8 @@ local function SXQBB_fake_script()
 	
 	
 end
-coroutine.wrap(SXQBB_fake_script)()
-local function MIUMF_fake_script()
+coroutine.wrap(PDSHCI_fake_script)()
+local function AXDYQ_fake_script()
 	local script = Instance.new('LocalScript', MainFrame)
 
 	function onKeyPress(inputObject, gameProcessedEvent)
@@ -152,8 +152,8 @@ local function MIUMF_fake_script()
 	
 	game:GetService("UserInputService").InputBegan:connect(onKeyPress)
 end
-coroutine.wrap(MIUMF_fake_script)()
-local function XERWHEZ_fake_script() 
+coroutine.wrap(AXDYQ_fake_script)()
+local function DWLPOW_fake_script()
 	local script = Instance.new('LocalScript', onoff)
 
 	local localPlayer = game:GetService("Players").LocalPlayer
@@ -175,7 +175,7 @@ local function XERWHEZ_fake_script()
 	local function getClosestPlayerToCursor() [nonamecall]
 		local closestPlayer = nil
 		local shortestDistance = math.huge
-	
+		
 		for i, v in pairs(game:GetService("Players"):GetPlayers()) do
 			if v.Name ~= localPlayer.Name then
 				if v.Character and v.Character:FindFirstChild("Humanoid") and v.Character.Humanoid.Health ~= 0 and v.Character:FindFirstChild("HumanoidRootPart") and v.Character:FindFirstChild("Head") then
@@ -189,7 +189,7 @@ local function XERWHEZ_fake_script()
 				end
 			end
 		end
-	
+		
 		return closestPlayer or localPlayer
 	end
 	
@@ -213,20 +213,14 @@ local function XERWHEZ_fake_script()
 				return oldNamecall(unpack(args))
 			end
 		end
-	
+		
 		return oldNamecall(...)
 	end)
 	
-	if setreadonly then 
-		setreadonly(mt, true) 
-	else 
-		make_writeable(mt, false) 
-	end
-	
-	
+	if setreadonly then setreadonly(mt, true) else make_writeable(mt, false) end
 end
-coroutine.wrap(XERWHEZ_fake_script)()
-local function ASSGIE_fake_script()
+coroutine.wrap(DWLPOW_fake_script)()
+local function GDOPNKQ_fake_script() -- TextLabel_1.LocalScript 
 	local script = Instance.new('LocalScript', TextLabel_1)
 
 	wait(4)
@@ -263,12 +257,12 @@ local function ASSGIE_fake_script()
 	print("This Was Made By Jonatan, Make Sure To Join My Discord = https://discord.gg/6awAEZn")
 	print("This Was Made By Jonatan, Make Sure To Join My Discord = https://discord.gg/6awAEZn")
 end
-coroutine.wrap(ASSGIE_fake_script)()
-local function EEUQ_fake_script()
+coroutine.wrap(GDOPNKQ_fake_script)()
+local function ZFYHLTY_fake_script() 
 	local script = Instance.new('LocalScript', HidedOnoff)
 
 	while wait(0.01) do
 		script.Parent.Text = script.Parent.Parent.Parent.MainFrame.onoff.Text
 	end
 end
-coroutine.wrap(EEUQ_fake_script)()
+coroutine.wrap(ZFYHLTY_fake_script)()
