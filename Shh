@@ -1,160 +1,46 @@
+wait(4)
+
+--[[
+	 Gui to Lua Converter
+-- Revamped by:HoIyScript
+--]]
+
+
+
+-- Instances:
+
 local ScreenGui = Instance.new("ScreenGui")
-local MainFrame = Instance.new("Frame")
-local TextLabel_2 = Instance.new("TextLabel")
-local TextLabel_3 = Instance.new("TextLabel")
-local onoff = Instance.new("TextLabel")
-local TextLabel_4 = Instance.new("TextLabel")
-local TextLabel_1 = Instance.new("TextLabel")
-local Hidedframe = Instance.new("Frame")
-local HidedOnoff = Instance.new("TextLabel")
+local Frame = Instance.new("Frame")
+local TextLabel = Instance.new("TextLabel")
+
+--[[
+	Properties:
+--]]
 
 ScreenGui.Parent = game.CoreGui
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
-MainFrame.Name = "MainFrame"
-MainFrame.Parent = ScreenGui
-MainFrame.BackgroundColor3 = Color3.new(0, 0, 0)
-MainFrame.BackgroundTransparency = 0.44999998807907
-MainFrame.BorderSizePixel = 7
-MainFrame.Position = UDim2.new(0.278610915, 0, 0.205159709, 0)
-MainFrame.Size = UDim2.new(0, 261, 0, 146)
+Frame.Parent = ScreenGui
+Frame.BackgroundColor3 = Color3.new(1, 1, 1)
+Frame.Position = UDim2.new(0.448471129, 0, -0.0133779263, 0)
+Frame.Size = UDim2.new(0, 106, 0, 27)
 
-TextLabel_2.Name = "TextLabel_2"
-TextLabel_2.Parent = MainFrame
-TextLabel_2.BackgroundColor3 = Color3.new(1, 0, 0)
-TextLabel_2.BackgroundTransparency = 0.34999999403954
-TextLabel_2.Size = UDim2.new(0, 261, 0, 50)
-TextLabel_2.Font = Enum.Font.SourceSans
-TextLabel_2.Text = "Assasin's B.A.C V1.0.0"
-TextLabel_2.TextColor3 = Color3.new(0, 0, 0)
-TextLabel_2.TextSize = 14
+TextLabel.Parent = Frame
+TextLabel.BackgroundColor3 = Color3.new(1, 1, 1)
+TextLabel.BackgroundTransparency = 1
+TextLabel.Position = UDim2.new(0, 0, 0.296296299, 0)
+TextLabel.Size = UDim2.new(0, 106, 0, 19)
+TextLabel.Font = Enum.Font.SourceSans
+TextLabel.Text = "Off"
+TextLabel.TextColor3 = Color3.new(0, 0, 0)
+TextLabel.TextSize = 14
 
-TextLabel_3.Name = "TextLabel_3"
-TextLabel_3.Parent = MainFrame
-TextLabel_3.BackgroundColor3 = Color3.new(1, 1, 1)
-TextLabel_3.BackgroundTransparency = 1
-TextLabel_3.Position = UDim2.new(-1.86264515e-09, 0, 0.45123291, 0)
-TextLabel_3.Size = UDim2.new(0, 163, 0, 36)
-TextLabel_3.Font = Enum.Font.SourceSans
-TextLabel_3.Text = "Silent Aim Is:"
-TextLabel_3.TextColor3 = Color3.new(1, 1, 1)
-TextLabel_3.TextScaled = true
-TextLabel_3.TextSize = 14
-TextLabel_3.TextWrapped = true
+--[[
+	 Scripts:
+--]]
 
-onoff.Name = "onoff"
-onoff.Parent = MainFrame
-onoff.BackgroundColor3 = Color3.new(1, 1, 1)
-onoff.BackgroundTransparency = 1
-onoff.Position = UDim2.new(0.59003824, 0, 0.45123288, 0)
-onoff.Size = UDim2.new(0, 133, 0, 36)
-onoff.Font = Enum.Font.SciFi
-onoff.Text = "N/A"
-onoff.TextColor3 = Color3.new(0, 1, 0)
-onoff.TextScaled = true
-onoff.TextSize = 14
-onoff.TextWrapped = true
-
-TextLabel_4.Name = "TextLabel_4"
-TextLabel_4.Parent = MainFrame
-TextLabel_4.BackgroundColor3 = Color3.new(1, 1, 1)
-TextLabel_4.BackgroundTransparency = 1
-TextLabel_4.Position = UDim2.new(0, 0, 0.386105657, 0)
-TextLabel_4.Size = UDim2.new(0, 275, 0, 18)
-TextLabel_4.Font = Enum.Font.SourceSans
-TextLabel_4.Text = "Press Q!"
-TextLabel_4.TextColor3 = Color3.new(1, 1, 1)
-TextLabel_4.TextScaled = true
-TextLabel_4.TextSize = 14
-TextLabel_4.TextWrapped = true
-
-TextLabel_1.Name = "TextLabel_1"
-TextLabel_1.Parent = MainFrame
-TextLabel_1.BackgroundColor3 = Color3.new(1, 1, 1)
-TextLabel_1.BackgroundTransparency = 1
-TextLabel_1.Position = UDim2.new(-0.0536398478, 0, 0.791037202, 0)
-TextLabel_1.Size = UDim2.new(0, 275, 0, 18)
-TextLabel_1.Font = Enum.Font.SourceSans
-TextLabel_1.Text = "Press R! (Knife Gotta Be Unequipped)"
-TextLabel_1.TextColor3 = Color3.new(1, 1, 1)
-TextLabel_1.TextScaled = true
-TextLabel_1.TextSize = 14
-TextLabel_1.TextWrapped = true
-
-Hidedframe.Name = "Hided frame"
-Hidedframe.Parent = ScreenGui
-Hidedframe.BackgroundColor3 = Color3.new(1, 1, 1)
-Hidedframe.Position = UDim2.new(0.761641622, 0, 0.0110565107, 0)
-Hidedframe.Size = UDim2.new(0, 100, 0, 17)
-Hidedframe.Visible = false
-
-HidedOnoff.Name = "HidedOnoff"
-HidedOnoff.Parent = Hidedframe
-HidedOnoff.BackgroundColor3 = Color3.new(1, 1, 1)
-HidedOnoff.Position = UDim2.new(-0.00999938976, 0, 0, 0)
-HidedOnoff.Size = UDim2.new(0, 101, 0, 17)
-HidedOnoff.Font = Enum.Font.SourceSans
-HidedOnoff.Text = "N/A"
-HidedOnoff.TextColor3 = Color3.new(0, 0, 0)
-HidedOnoff.TextSize = 14
-
-local function WWZKPG_fake_script() 
-	local script = Instance.new('LocalScript', TextLabel_3)
-
-	function zigzag(X) return math.acos(math.cos(X*math.pi))/math.pi end
-	counter = 0
-	
-	while wait(0.1) do
-		script.Parent.TextColor3 = Color3.fromHSV(zigzag(counter),1,1)
-		counter = counter + 0.01
-	end
-	
-	
-end
-coroutine.wrap(WWZKPG_fake_script)()
-local function UXEJN_fake_script()
-	local script = Instance.new('LocalScript', MainFrame)
-
-	function zigzag(X) return math.acos(math.cos(X*math.pi))/math.pi end
-	counter = 0
-	
-	while wait(0.1) do
-		script.Parent.BorderColor3 = Color3.fromHSV(zigzag(counter),1,1)
-		counter = counter + 0.01
-	end
-	
-	script.Parent.Active = true
-	script.Parent.Draggable = true
-end
-coroutine.wrap(UXEJN_fake_script)()
-local function PDSHCI_fake_script()
-	local script = Instance.new('LocalScript', MainFrame)
-
-	script.Parent.Active = true
-	script.Parent.Draggable = true
-	
-	
-end
-coroutine.wrap(PDSHCI_fake_script)()
-local function AXDYQ_fake_script()
-	local script = Instance.new('LocalScript', MainFrame)
-
-	function onKeyPress(inputObject, gameProcessedEvent)
-		if inputObject.KeyCode == Enum.KeyCode.RightAlt then
-			if script.Parent.Visible == false then
-				script.Parent.Visible = true
-				script.Parent.Parent["Hided frame"].Visible = false
-			else
-				script.Parent.Visible = false
-				script.Parent.Parent["Hided frame"].Visible = true
-			end
-		end
-	end
-	
-	game:GetService("UserInputService").InputBegan:connect(onKeyPress)
-end
-coroutine.wrap(AXDYQ_fake_script)()
-local function DWLPOW_fake_script()
-	local script = Instance.new('LocalScript', onoff)
+local function DPYDKMI_fake_script() -- TextLabel.LocalScript 
+	local script = Instance.new('LocalScript', TextLabel)
 
 	local localPlayer = game:GetService("Players").LocalPlayer
 	local currentCamera = game:GetService("Workspace").CurrentCamera
@@ -162,35 +48,35 @@ local function DWLPOW_fake_script()
 	local on = false
 	mouse.KeyDown:Connect(function(f)
 		if f == "q" then
-			if on == false then
-				script.Parent.Text = "On"
-				on = true
-			else
-				on = false
-				script.Parent.Text = "Off"
-			end
+		    if on == false then
+	    		script.Parent.Text = "On"
+	    		on = true
+	    	else
+	    	    on = false
+	    	    script.Parent.Text = "Off"
+	    	end
 		end
 	end)
 	
-	local function getClosestPlayerToCursor() [nonamecall]
-		local closestPlayer = nil
-		local shortestDistance = math.huge
-		
-		for i, v in pairs(game:GetService("Players"):GetPlayers()) do
-			if v.Name ~= localPlayer.Name then
-				if v.Character and v.Character:FindFirstChild("Humanoid") and v.Character.Humanoid.Health ~= 0 and v.Character:FindFirstChild("HumanoidRootPart") and v.Character:FindFirstChild("Head") then
-					local pos = currentCamera:WorldToViewportPoint(v.Character.HumanoidRootPart.Position)
-					local magnitude = (Vector2.new(pos.X, pos.Y) - Vector2.new(mouse.X, mouse.Y)).magnitude
-					
-					if magnitude < shortestDistance then
-						closestPlayer = v
-						shortestDistance = magnitude
-					end
+	local function getClosestPlayerToCursor() 
+	    local closestPlayer = nil
+	    local shortestDistance = math.huge
+	
+	    for i, v in pairs(game:GetService("Players"):GetPlayers()) do
+	        if v.Name ~= localPlayer.Name then
+	            if v.Character and v.Character:FindFirstChild("Humanoid") and v.Character.Humanoid.Health ~= 0 and v.Character:FindFirstChild("HumanoidRootPart") and v.Character:FindFirstChild("Head") then
+	                local pos = currentCamera:WorldToViewportPoint(v.Character.HumanoidRootPart.Position)
+	                local magnitude = (Vector2.new(pos.X, pos.Y) - Vector2.new(mouse.X, mouse.Y)).magnitude
+	
+	                if magnitude < shortestDistance then
+	                    closestPlayer = v
+	                    shortestDistance = magnitude
+	                end
 				end
-			end
-		end
-		
-		return closestPlayer or localPlayer
+	        end
+	    end
+	
+	    return closestPlayer or localPlayer
 	end
 	
 	
@@ -200,69 +86,26 @@ local function DWLPOW_fake_script()
 	local namecallMethod = getnamecallmethod or get_namecall_method
 	local newClose = newcclosure or function(f) return f end
 	
-	mt.__namecall = newClose(function(...) [nonamecall]
-		local method = namecallMethod()
-		local args = {...}
+	mt.__namecall = newClose(function(...) 
+	    local method = namecallMethod()
+	    local args = {...}
 		if on then
-			if tostring(method) == "FireServer" and tostring(args[1]) == "ThrowKnife" and getClosestPlayerToCursor() and getClosestPlayerToCursor().Character:FindFirstChild("HumanoidRootPart") then
-				local humRootPart = getClosestPlayerToCursor().Character.HumanoidRootPart
-				local pos = humRootPart.Position
-				local vel = humRootPart.Velocity
-				args[2] = pos + Vector3.new((vel.X >= 3.5 and 3.5) or (vel.X >= 1 and 1) or (vel.X <= -3.5 and -3.5) or (vel.X <= -1 and -1) or 0, (vel.Y >= 3.5 and 3.5) or (vel.Y >= 1 and 1) or (vel.Y <= -3.5 and -3.5) or (vel.Y <= -1 and -1) or 0, (vel.Z >= 3.5 and 3.5) or (vel.Z >= 1 and 1) or (vel.Z <= -3.5 and -3.5) or (vel.Z <= -1 and -1) or 0)
-				
-				return oldNamecall(unpack(args))
-			end
+		    if tostring(method) == "FireServer" and tostring(args[1]) == "ThrowKnife" and getClosestPlayerToCursor() and getClosestPlayerToCursor().Character:FindFirstChild("HumanoidRootPart") then
+		        local humRootPart = getClosestPlayerToCursor().Character.Head
+		        local pos = humRootPart.Position
+		        local vel = humRootPart.Velocity
+		        if pos.magnitude < 20 then
+		            args[2] = pos + Vector3.new((vel.X >= 1 and 1) or (vel.X >= 1 and 1) or (vel.X <= -1 and -1) or (vel.X <= -1 and -1) or 0, (vel.Y >= 1 and 1) or (vel.Y >= 1 and 1) or (vel.Y <= -1 and -1) or (vel.Y <= -1 and -1) or 0, (vel.Z >= 1 and 1) or (vel.Z >= 1 and 1) or (vel.Z <= -1 and -1) or (vel.Z <= -1 and -1) or 0)
+		        else
+		            args[2] = pos + Vector3.new((vel.X >= 3.5 and 3.5) or (vel.X >= 1 and 1) or (vel.X <= -3.5 and -3.5) or (vel.X <= -1 and -1) or 0, (vel.Y >= 3.5 and 3.5) or (vel.Y >= 1 and 1) or (vel.Y <= -3.5 and -3.5) or (vel.Y <= -1 and -1) or 0, (vel.Z >= 3.5 and 3.5) or (vel.Z >= 1 and 1) or (vel.Z <= -3.5 and -3.5) or (vel.Z <= -1 and -1) or 0)
+		        end
+		        return oldNamecall(unpack(args))
+			   end
 		end
-		
-		return oldNamecall(...)
+	
+	    return oldNamecall(...)
 	end)
 	
 	if setreadonly then setreadonly(mt, true) else make_writeable(mt, false) end
 end
-coroutine.wrap(DWLPOW_fake_script)()
-local function GDOPNKQ_fake_script() -- TextLabel_1.LocalScript 
-	local script = Instance.new('LocalScript', TextLabel_1)
-
-	wait(4)
-	
-	function getNil(name,class) for _,v in pairs(getnilinstances())do if v.ClassName==class and v.Name==name then return v;end end end
-	local args;
-	args = {
-		[1] = Vector3.new(466.174133, 834.66925, -1741.8136),
-		[2] =  00000,
-		[3] = CFrame.new(0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1),
-	}
-	
-	local j = game.Players.LocalPlayer
-	local mouse = j:GetMouse()
-	
-	mouse.KeyDown:Connect(function(gol)
-		if gol == 'r' then        
-			for i,v in next, game.Players.LocalPlayer.Backpack:GetChildren() do
-				if v:isA("Tool") and v.Name == "Knife" then
-					game.Players.LocalPlayer.Character.Humanoid:EquipTool(v)
-					wait(0.1)
-					mouse1press()
-					wait(.23)
-					game:GetService("ReplicatedStorage").Remotes.ThrowKnife:FireServer(unpack(args))
-					wait(0.50)
-					game.Players.LocalPlayer.Character.Humanoid:UnequipTools()
-				end
-			end
-		end
-	end)
-	
-	
-	print("This Was Made By Jonatan, Make Sure To Join My Discord = https://discord.gg/6awAEZn")
-	print("This Was Made By Jonatan, Make Sure To Join My Discord = https://discord.gg/6awAEZn")
-	print("This Was Made By Jonatan, Make Sure To Join My Discord = https://discord.gg/6awAEZn")
-end
-coroutine.wrap(GDOPNKQ_fake_script)()
-local function ZFYHLTY_fake_script() 
-	local script = Instance.new('LocalScript', HidedOnoff)
-
-	while wait(0.01) do
-		script.Parent.Text = script.Parent.Parent.Parent.MainFrame.onoff.Text
-	end
-end
-coroutine.wrap(ZFYHLTY_fake_script)()
+coroutine.wrap(DPYDKMI_fake_script)()
